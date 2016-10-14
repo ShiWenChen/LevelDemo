@@ -14,6 +14,7 @@
 		84BF20231DAF361A00D1881C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84BF20221DAF361A00D1881C /* Assets.xcassets */; };
 		84BF20261DAF361A00D1881C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84BF20241DAF361A00D1881C /* LaunchScreen.storyboard */; };
 		84BF20311DAF361A00D1881C /* ___Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BF20301DAF361A00D1881C /* ___Tests.m */; };
+		84BF203D1DAF363000D1881C /* LevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BF203C1DAF363000D1881C /* LevelView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		84BF202C1DAF361A00D1881C /* 水平仪Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "水平仪Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BF20301DAF361A00D1881C /* ___Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___Tests.m"; sourceTree = "<group>"; };
 		84BF20321DAF361A00D1881C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84BF203B1DAF363000D1881C /* LevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelView.h; sourceTree = "<group>"; };
+		84BF203C1DAF363000D1881C /* LevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				84BF201C1DAF361A00D1881C /* ViewController.h */,
 				84BF201D1DAF361A00D1881C /* ViewController.m */,
 				84BF201F1DAF361A00D1881C /* Main.storyboard */,
+				84BF203B1DAF363000D1881C /* LevelView.h */,
+				84BF203C1DAF363000D1881C /* LevelView.m */,
 				84BF20221DAF361A00D1881C /* Assets.xcassets */,
 				84BF20241DAF361A00D1881C /* LaunchScreen.storyboard */,
 				84BF20271DAF361A00D1881C /* Info.plist */,
@@ -160,7 +165,8 @@
 				TargetAttributes = {
 					84BF20121DAF361A00D1881C = {
 						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = X585696T4B;
+						ProvisioningStyle = Manual;
 					};
 					84BF202B1DAF361A00D1881C = {
 						CreatedOnToolsVersion = 8.0;
@@ -214,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84BF201E1DAF361A00D1881C /* ViewController.m in Sources */,
+				84BF203D1DAF363000D1881C /* LevelView.m in Sources */,
 				84BF201B1DAF361A00D1881C /* AppDelegate.m in Sources */,
 				84BF20181DAF361A00D1881C /* main.m in Sources */,
 			);
@@ -349,10 +356,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X585696T4B;
 				INFOPLIST_FILE = "水平仪/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ShiWenChen.4.---";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1f1f8201-d459-4ce0-9b3b-9fde5fc429c4";
+				PROVISIONING_PROFILE_SPECIFIER = TestApp;
 			};
 			name = Debug;
 		};
@@ -360,10 +370,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X585696T4B;
 				INFOPLIST_FILE = "水平仪/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ShiWenChen.4.---";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1f1f8201-d459-4ce0-9b3b-9fde5fc429c4";
+				PROVISIONING_PROFILE_SPECIFIER = TestApp;
 			};
 			name = Release;
 		};
