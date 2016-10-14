@@ -31,12 +31,6 @@
     [super viewDidLoad];
     _levelView.layer.cornerRadius = 100;
     _levelView.layer.masksToBounds = YES;
-//    UIView *testView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
-//    testView.backgroundColor = [UIColor redColor];
-//    [_levelView addSubview:testView];
-//    UIView *test2VIew = [[UIView alloc] initWithFrame:CGRectMake(100, 0, 100, 100)];
-//    test2VIew.backgroundColor = [UIColor orangeColor];
-//    [_levelView addSubview:test2VIew];
     
     
     self.motionManager = [[CMMotionManager alloc]init];
@@ -44,10 +38,13 @@
     [self.motionManager startDeviceMotionUpdatesToQueue: [[NSOperationQueue alloc] init] withHandler:^(CMDeviceMotion * _Nullable motion, NSError * _Nullable error) {
         //空间位置的欧拉角（通过欧拉角可以算得手机两个时刻之间的夹角，比用角速度计算精确地多）
         CMAttitude *attitude = motion.attitude;
+        ///手机左右晃动
+        double roll = attitude.roll;
+        ///手机上下旋转
         double pitch = attitude.pitch;
         double yaw = attitude.yaw;
         dispatch_async(dispatch_get_main_queue(), ^{
-             [_levelView setTransform:CGAffineTransformMakeRotation(-attitude.roll)];
+             [_levelView setTransform:CGAffineTransformMakeRotation(-roll)];
             _levelView.centerPosition = [self getCenterPosithion:RADIANS_TO_DEGREES(pitch)];
             [_levelView setNeedsDisplay];
             NSLog(@"%f",RADIANS_TO_DEGREES(pitch));
